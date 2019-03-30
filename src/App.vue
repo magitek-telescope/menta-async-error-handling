@@ -55,7 +55,7 @@ export default {
       }
       try {
         await asyncFunc()
-        this.log += "\n" + '最後まで疎通' + "\n"
+        this.log += "\n" + '最後まで疎通' + "\n----------"
       } catch(e) {
         console.log(e)
         this.log += "\n" + `catch でハンドリング: (${inspect(e)})` + "\n----------"
@@ -74,7 +74,7 @@ export default {
         await asyncFunc().catch((e) => {
           this.log += "\n" + `エラーを途中でキャッチ${inspect(e)}`
         })
-        this.log += "\n" + '最後まで疎通' + "\n"
+        this.log += "\n" + '最後まで疎通' + "\n----------"
       } catch(e) {
         console.log(e)
         this.log += "\n" + `catch でハンドリング: (${inspect(e)})` + "\n----------"
